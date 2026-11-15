@@ -1,4 +1,3 @@
-"""Convert a chat's entity-text response into the common prediction format."""
 import re
 from ner.evaluation import ENTITY_LABELS
 from ner.experiments import ROOT, evaluate_experiment
@@ -6,7 +5,6 @@ from ner.utils import load_jsonl
 
 
 def align_chat_response(samples: list[dict], responses: list[dict]) -> list[dict]:
-    """Locate all exact mentions of the values selected by the chat, without gold spans."""
     by_id = {sample["id"]: sample for sample in samples}
     predictions = []
     if len({response["id"] for response in responses}) != len(responses):

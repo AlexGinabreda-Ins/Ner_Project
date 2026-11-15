@@ -10,7 +10,6 @@ def extract_text_from_pdf(path: str | Path) -> str:
 
 
 def extract_pdf_dataset(pdf_dir: str | Path, gold_samples: list[dict]) -> list[dict]:
-    """Select PDFs by id, preserving gold order without using gold annotations."""
     directory = Path(pdf_dir)
     by_id = {}
     for path in sorted(directory.glob("*.pdf")):

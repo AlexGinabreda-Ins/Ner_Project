@@ -19,7 +19,6 @@ ENTITY_LABELS = (
 
 
 def calculate_metrics(tp: int, fp: int, fn: int) -> dict[str, float | int]:
-    """Calculate precision, recall and F1 from TP, FP and FN counts."""
     precision = tp / (tp + fp) if tp + fp else 0.0
     recall = tp / (tp + fn) if tp + fn else 0.0
     f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
@@ -35,7 +34,6 @@ def calculate_metrics(tp: int, fp: int, fn: int) -> dict[str, float | int]:
 
 
 def _empty_counts() -> dict[str, int]:
-    """Create an empty TP/FP/FN counter."""
     return {"tp": 0, "fp": 0, "fn": 0}
 
 
@@ -45,7 +43,6 @@ def _increment(
     key: str,
     amount: int = 1,
 ) -> None:
-    """Increment one label-level counter, including unexpected labels."""
     if label not in counts_by_label:
         counts_by_label[label] = _empty_counts()
 
@@ -55,7 +52,6 @@ def _increment(
 def _build_metric_block(
     counts_by_label: dict[str, dict[str, int]],
 ) -> dict[str, Any]:
-    """Build micro metrics and per-entity-type metrics from raw counts."""
     labels = list(ENTITY_LABELS)
     labels.extend(sorted(label for label in counts_by_label if label not in ENTITY_LABELS))
 
@@ -80,7 +76,6 @@ def _load_aligned_samples(
     gold_path: str | Path,
     predictions_path: str | Path,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """Load predictions and the matching prefix of the gold dataset."""
     predicted_samples = load_jsonl(predictions_path)
     gold_samples = load_jsonl(gold_path, n=len(predicted_samples))
 
@@ -103,7 +98,6 @@ def _load_aligned_samples(
 
 
 def _entity_text(entity: dict[str, Any], document_text: str) -> str:
-    """Read entity text directly or recover it from character offsets."""
     if entity.get("text") is not None:
         return str(entity["text"])
 
@@ -111,12 +105,10 @@ def _entity_text(entity: dict[str, Any], document_text: str) -> str:
 
 
 def _normalize_relaxed_text(text: str) -> str:
-    """Collapse whitespace so PDF line wrapping does not change entity identity."""
     return re.sub(r"\s+", " ", text).strip()
 
 
 def _print_metric_block(title: str, metrics: dict[str, Any]) -> None:
-    """Print micro and per-entity metrics with counts in a compact table."""
     micro = metrics["micro"]
 
     print(f"\n{title}")
@@ -155,7 +147,6 @@ def evaluate_ner_strict(
     predictions_path: str | Path,
     print_results: bool = True,
 ) -> dict[str, Any]:
-    """Evaluate exact matches of entity start, end and label. """
     gold_samples, predicted_samples = _load_aligned_samples(
         gold_path,
         predictions_path,
@@ -197,7 +188,6 @@ def _evaluate_relaxed_mode(
     predicted_samples: list[dict[str, Any]],
     unique: bool,
 ) -> dict[str, Any]:
-    """Evaluate label and whitespace-normalized text while ignoring character spans."""
     counts_by_label = {label: _empty_counts() for label in ENTITY_LABELS}
 
     for gold, predicted in zip(gold_samples, predicted_samples):
@@ -246,7 +236,6 @@ def evaluate_ner_relaxed(
     predictions_path: str | Path,
     print_results: bool = True,
 ) -> dict[str, Any]:
-    """Evaluate label and whitespace-normalized text without spans in two views."""
     gold_samples, predicted_samples = _load_aligned_samples(
         gold_path,
         predictions_path,

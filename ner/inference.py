@@ -19,7 +19,6 @@ def load_gliner_model(model_name: str = DEFAULT_MODEL, device: str | None = None
 
 
 def split_into_chunks(text: str, size: int = 200, overlap: int = 40):
-    """Yield overlapping windows with their original character offsets."""
     if not 0 <= overlap < size:
         raise ValueError("Require 0 <= overlap < size")
     tokens = list(re.finditer(r"\w+|[^\w\s]", text))
@@ -32,7 +31,6 @@ def split_into_chunks(text: str, size: int = 200, overlap: int = 40):
 
 
 def predict_entities(model, text: str, labels: list[str], threshold: float = 0.5):
-    """Restore global offsets and deduplicate entities in overlapping windows."""
     found = {}
     for offset, chunk in split_into_chunks(text):
         for entity in model.predict_entities(chunk, labels, threshold=threshold):

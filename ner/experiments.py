@@ -1,4 +1,3 @@
-"""Run the required GLiNER experiments and save predictions and metrics."""
 from pathlib import Path
 import json
 import platform
@@ -14,7 +13,6 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def evaluate_experiment(samples, predictions, output_path, **metadata):
-    """Align gold explicitly so a PDF subset never gets scored by position alone."""
     by_id = {sample["id"]: sample for sample in samples}
     gold = [by_id[prediction["id"]] for prediction in predictions]
     gold_path = output_path.with_name(output_path.stem + "_gold.jsonl")
