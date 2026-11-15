@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import platform
+import re
 import time
 
 from ner.evaluation import ENTITY_LABELS, evaluate_ner_relaxed, evaluate_ner_strict
@@ -31,7 +32,6 @@ def evaluate_experiment(samples, predictions, output_path, **metadata):
 
 def main():
     import torch
-    import gliner
     import pymupdf
     from importlib.metadata import version
 
@@ -49,6 +49,15 @@ def main():
         "inputs": {name: {"documents": len(rows),
                            "empty_texts": sum(not r["text"].strip() for r in rows)}
                    for name, rows in inputs.items()},
+    }
+    plain_by_id = {sample["id"]: sample["text"] for sample in gold}
+    clean = inputs["pdf_clean"]
+    configuration["clean_pdf_alignment"] = {
+        "identical_texts": sum(s["text"] == plain_by_id[s["id"]] for s in clean),
+        "equal_character_counts": sum(len(s["text"]) == len(plain_by_id[s["id"]]) for s in clean),
+        "whitespace_normalized_equal": sum(
+            re.sub(r"\s+", " ", s["text"]).strip()
+            == re.sub(r"\s+", " ", plain_by_id[s["id"]]).strip() for s in clean),
     }
     results_dir = ROOT / "results"
     results_dir.mkdir(exist_ok=True)

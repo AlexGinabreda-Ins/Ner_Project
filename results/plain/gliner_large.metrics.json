@@ -1,0 +1,216 @@
+{
+  "input": "plain",
+  "model": "gliner-community/gliner_large-v2.5",
+  "label_descriptions": false,
+  "extraction": null,
+  "seconds": 574.583,
+  "documents": 50,
+  "strict": {
+    "compared_samples": 50,
+    "micro": {
+      "precision": 0.9275793650793651,
+      "recall": 0.9121951219512195,
+      "f1": 0.9198229217904574,
+      "true_positives": 1870,
+      "false_positives": 146,
+      "false_negatives": 180
+    },
+    "per_entity_type": {
+      "PERSON_NAME": {
+        "precision": 0.9191176470588235,
+        "recall": 1.0,
+        "f1": 0.9578544061302682,
+        "true_positives": 500,
+        "false_positives": 44,
+        "false_negatives": 0
+      },
+      "ID_CARD_NUMBER": {
+        "precision": 0.9005847953216374,
+        "recall": 0.77,
+        "f1": 0.8301886792452831,
+        "true_positives": 154,
+        "false_positives": 17,
+        "false_negatives": 46
+      },
+      "ADDRESS": {
+        "precision": 0.94,
+        "recall": 0.94,
+        "f1": 0.94,
+        "true_positives": 188,
+        "false_positives": 12,
+        "false_negatives": 12
+      },
+      "REGISTRATION_NUMBER": {
+        "precision": 0.9555555555555556,
+        "recall": 0.516,
+        "f1": 0.6701298701298701,
+        "true_positives": 129,
+        "false_positives": 6,
+        "false_negatives": 121
+      },
+      "DATE": {
+        "precision": 0.9779951100244498,
+        "recall": 1.0,
+        "f1": 0.9888751545117428,
+        "true_positives": 400,
+        "false_positives": 9,
+        "false_negatives": 0
+      },
+      "AMOUNT": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1": 0.9523809523809523,
+        "true_positives": 200,
+        "false_positives": 20,
+        "false_negatives": 0
+      },
+      "ORGANIZATION": {
+        "precision": 0.887240356083086,
+        "recall": 0.9966666666666667,
+        "f1": 0.9387755102040816,
+        "true_positives": 299,
+        "false_positives": 38,
+        "false_negatives": 1
+      }
+    }
+  },
+  "relaxed": {
+    "compared_samples": 50,
+    "occurrences": {
+      "micro": {
+        "precision": 0.9275793650793651,
+        "recall": 0.9121951219512195,
+        "f1": 0.9198229217904574,
+        "true_positives": 1870,
+        "false_positives": 146,
+        "false_negatives": 180
+      },
+      "per_entity_type": {
+        "PERSON_NAME": {
+          "precision": 0.9191176470588235,
+          "recall": 1.0,
+          "f1": 0.9578544061302682,
+          "true_positives": 500,
+          "false_positives": 44,
+          "false_negatives": 0
+        },
+        "ID_CARD_NUMBER": {
+          "precision": 0.9005847953216374,
+          "recall": 0.77,
+          "f1": 0.8301886792452831,
+          "true_positives": 154,
+          "false_positives": 17,
+          "false_negatives": 46
+        },
+        "ADDRESS": {
+          "precision": 0.94,
+          "recall": 0.94,
+          "f1": 0.94,
+          "true_positives": 188,
+          "false_positives": 12,
+          "false_negatives": 12
+        },
+        "REGISTRATION_NUMBER": {
+          "precision": 0.9555555555555556,
+          "recall": 0.516,
+          "f1": 0.6701298701298701,
+          "true_positives": 129,
+          "false_positives": 6,
+          "false_negatives": 121
+        },
+        "DATE": {
+          "precision": 0.9779951100244498,
+          "recall": 1.0,
+          "f1": 0.9888751545117428,
+          "true_positives": 400,
+          "false_positives": 9,
+          "false_negatives": 0
+        },
+        "AMOUNT": {
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "f1": 0.9523809523809523,
+          "true_positives": 200,
+          "false_positives": 20,
+          "false_negatives": 0
+        },
+        "ORGANIZATION": {
+          "precision": 0.887240356083086,
+          "recall": 0.9966666666666667,
+          "f1": 0.9387755102040816,
+          "true_positives": 299,
+          "false_positives": 38,
+          "false_negatives": 1
+        }
+      }
+    },
+    "unique": {
+      "micro": {
+        "precision": 0.8923766816143498,
+        "recall": 0.9184615384615384,
+        "f1": 0.9052312357846855,
+        "true_positives": 1194,
+        "false_positives": 144,
+        "false_negatives": 106
+      },
+      "per_entity_type": {
+        "PERSON_NAME": {
+          "precision": 0.7731958762886598,
+          "recall": 1.0,
+          "f1": 0.8720930232558141,
+          "true_positives": 150,
+          "false_positives": 44,
+          "false_negatives": 0
+        },
+        "ID_CARD_NUMBER": {
+          "precision": 0.8495575221238938,
+          "recall": 0.96,
+          "f1": 0.9014084507042253,
+          "true_positives": 96,
+          "false_positives": 17,
+          "false_negatives": 4
+        },
+        "ADDRESS": {
+          "precision": 0.8867924528301887,
+          "recall": 0.94,
+          "f1": 0.912621359223301,
+          "true_positives": 94,
+          "false_positives": 12,
+          "false_negatives": 6
+        },
+        "REGISTRATION_NUMBER": {
+          "precision": 0.9,
+          "recall": 0.36,
+          "f1": 0.5142857142857143,
+          "true_positives": 54,
+          "false_positives": 6,
+          "false_negatives": 96
+        },
+        "DATE": {
+          "precision": 0.9779951100244498,
+          "recall": 1.0,
+          "f1": 0.9888751545117428,
+          "true_positives": 400,
+          "false_positives": 9,
+          "false_negatives": 0
+        },
+        "AMOUNT": {
+          "precision": 0.91324200913242,
+          "recall": 1.0,
+          "f1": 0.954653937947494,
+          "true_positives": 200,
+          "false_positives": 19,
+          "false_negatives": 0
+        },
+        "ORGANIZATION": {
+          "precision": 0.8438818565400844,
+          "recall": 1.0,
+          "f1": 0.9153318077803204,
+          "true_positives": 200,
+          "false_positives": 37,
+          "false_negatives": 0
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,5 @@
 """Convert a chat's entity-text response into the common prediction format."""
 import re
-from pathlib import Path
-
 from ner.evaluation import ENTITY_LABELS
 from ner.experiments import ROOT, evaluate_experiment
 from ner.utils import load_jsonl

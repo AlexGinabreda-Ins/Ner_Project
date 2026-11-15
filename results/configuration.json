@@ -1,0 +1,33 @@
+{
+  "python": "3.13.18",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "torch": "2.15.0+cpu",
+  "gliner": "0.2.30",
+  "pymupdf": "2.1",
+  "device": "cpu",
+  "threads": 4,
+  "threshold": 0.5,
+  "window_tokens": 200,
+  "overlap_tokens": 40,
+  "label_descriptions": false,
+  "inputs": {
+    "plain": {
+      "documents": 50,
+      "empty_texts": 0
+    },
+    "pdf_clean": {
+      "documents": 50,
+      "empty_texts": 0
+    },
+    "pdf_scanned": {
+      "documents": 10,
+      "empty_texts": 10
+    }
+  },
+  "clean_pdf_alignment": {
+    "identical_texts": 0,
+    "equal_character_counts": 50,
+    "whitespace_normalized_equal": 50
+  }
+}

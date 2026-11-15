@@ -1,0 +1,215 @@
+{
+  "input": "plain (first two documents)",
+  "model": "gliner-community/gliner_small-v2.5",
+  "label_descriptions": false,
+  "extraction": null,
+  "documents": 2,
+  "strict": {
+    "compared_samples": 2,
+    "micro": {
+      "precision": 0.6470588235294118,
+      "recall": 0.8048780487804879,
+      "f1": 0.717391304347826,
+      "true_positives": 66,
+      "false_positives": 36,
+      "false_negatives": 16
+    },
+    "per_entity_type": {
+      "PERSON_NAME": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1": 0.9523809523809523,
+        "true_positives": 20,
+        "false_positives": 2,
+        "false_negatives": 0
+      },
+      "ID_CARD_NUMBER": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "true_positives": 6,
+        "false_positives": 0,
+        "false_negatives": 2
+      },
+      "ADDRESS": {
+        "precision": 0.07142857142857142,
+        "recall": 0.125,
+        "f1": 0.09090909090909091,
+        "true_positives": 1,
+        "false_positives": 13,
+        "false_negatives": 7
+      },
+      "REGISTRATION_NUMBER": {
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "f1": 0.8695652173913044,
+        "true_positives": 10,
+        "false_positives": 3,
+        "false_negatives": 0
+      },
+      "DATE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "true_positives": 16,
+        "false_positives": 0,
+        "false_negatives": 0
+      },
+      "AMOUNT": {
+        "precision": 0.45454545454545453,
+        "recall": 0.625,
+        "f1": 0.5263157894736842,
+        "true_positives": 5,
+        "false_positives": 6,
+        "false_negatives": 3
+      },
+      "ORGANIZATION": {
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "f1": 0.5,
+        "true_positives": 8,
+        "false_positives": 12,
+        "false_negatives": 4
+      }
+    }
+  },
+  "relaxed": {
+    "compared_samples": 2,
+    "occurrences": {
+      "micro": {
+        "precision": 0.6470588235294118,
+        "recall": 0.8048780487804879,
+        "f1": 0.717391304347826,
+        "true_positives": 66,
+        "false_positives": 36,
+        "false_negatives": 16
+      },
+      "per_entity_type": {
+        "PERSON_NAME": {
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "f1": 0.9523809523809523,
+          "true_positives": 20,
+          "false_positives": 2,
+          "false_negatives": 0
+        },
+        "ID_CARD_NUMBER": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "true_positives": 6,
+          "false_positives": 0,
+          "false_negatives": 2
+        },
+        "ADDRESS": {
+          "precision": 0.07142857142857142,
+          "recall": 0.125,
+          "f1": 0.09090909090909091,
+          "true_positives": 1,
+          "false_positives": 13,
+          "false_negatives": 7
+        },
+        "REGISTRATION_NUMBER": {
+          "precision": 0.7692307692307693,
+          "recall": 1.0,
+          "f1": 0.8695652173913044,
+          "true_positives": 10,
+          "false_positives": 3,
+          "false_negatives": 0
+        },
+        "DATE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positives": 16,
+          "false_positives": 0,
+          "false_negatives": 0
+        },
+        "AMOUNT": {
+          "precision": 0.45454545454545453,
+          "recall": 0.625,
+          "f1": 0.5263157894736842,
+          "true_positives": 5,
+          "false_positives": 6,
+          "false_negatives": 3
+        },
+        "ORGANIZATION": {
+          "precision": 0.4,
+          "recall": 0.6666666666666666,
+          "f1": 0.5,
+          "true_positives": 8,
+          "false_positives": 12,
+          "false_negatives": 4
+        }
+      }
+    },
+    "unique": {
+      "micro": {
+        "precision": 0.625,
+        "recall": 0.8653846153846154,
+        "f1": 0.7258064516129031,
+        "true_positives": 45,
+        "false_positives": 27,
+        "false_negatives": 7
+      },
+      "per_entity_type": {
+        "PERSON_NAME": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "true_positives": 6,
+          "false_positives": 2,
+          "false_negatives": 0
+        },
+        "ID_CARD_NUMBER": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positives": 4,
+          "false_positives": 0,
+          "false_negatives": 0
+        },
+        "ADDRESS": {
+          "precision": 0.125,
+          "recall": 0.25,
+          "f1": 0.16666666666666666,
+          "true_positives": 1,
+          "false_positives": 7,
+          "false_negatives": 3
+        },
+        "REGISTRATION_NUMBER": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "true_positives": 6,
+          "false_positives": 3,
+          "false_negatives": 0
+        },
+        "DATE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positives": 16,
+          "false_positives": 0,
+          "false_negatives": 0
+        },
+        "AMOUNT": {
+          "precision": 0.45454545454545453,
+          "recall": 0.625,
+          "f1": 0.5263157894736842,
+          "true_positives": 5,
+          "false_positives": 6,
+          "false_negatives": 3
+        },
+        "ORGANIZATION": {
+          "precision": 0.4375,
+          "recall": 0.875,
+          "f1": 0.5833333333333334,
+          "true_positives": 7,
+          "false_positives": 9,
+          "false_negatives": 1
+        }
+      }
+    }
+  }
+}

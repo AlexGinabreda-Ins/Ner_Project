@@ -1,0 +1,216 @@
+{
+  "input": "pdf_clean",
+  "model": "gliner-community/gliner_small-v2.5",
+  "label_descriptions": false,
+  "extraction": "PyMuPDF",
+  "seconds": 133.544,
+  "documents": 50,
+  "strict": {
+    "compared_samples": 50,
+    "micro": {
+      "precision": 0.7081807081807082,
+      "recall": 0.848780487804878,
+      "f1": 0.7721322387397382,
+      "true_positives": 1740,
+      "false_positives": 717,
+      "false_negatives": 310
+    },
+    "per_entity_type": {
+      "PERSON_NAME": {
+        "precision": 0.946969696969697,
+        "recall": 1.0,
+        "f1": 0.9727626459143969,
+        "true_positives": 500,
+        "false_positives": 28,
+        "false_negatives": 0
+      },
+      "ID_CARD_NUMBER": {
+        "precision": 0.782608695652174,
+        "recall": 0.81,
+        "f1": 0.7960687960687962,
+        "true_positives": 162,
+        "false_positives": 45,
+        "false_negatives": 38
+      },
+      "ADDRESS": {
+        "precision": 0.030226700251889168,
+        "recall": 0.06,
+        "f1": 0.04020100502512562,
+        "true_positives": 12,
+        "false_positives": 385,
+        "false_negatives": 188
+      },
+      "REGISTRATION_NUMBER": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1": 0.8571428571428572,
+        "true_positives": 225,
+        "false_positives": 50,
+        "false_negatives": 25
+      },
+      "DATE": {
+        "precision": 0.9707317073170731,
+        "recall": 0.995,
+        "f1": 0.982716049382716,
+        "true_positives": 398,
+        "false_positives": 12,
+        "false_negatives": 2
+      },
+      "AMOUNT": {
+        "precision": 0.7066115702479339,
+        "recall": 0.855,
+        "f1": 0.7737556561085973,
+        "true_positives": 171,
+        "false_positives": 71,
+        "false_negatives": 29
+      },
+      "ORGANIZATION": {
+        "precision": 0.6834170854271356,
+        "recall": 0.9066666666666666,
+        "f1": 0.7793696275071633,
+        "true_positives": 272,
+        "false_positives": 126,
+        "false_negatives": 28
+      }
+    }
+  },
+  "relaxed": {
+    "compared_samples": 50,
+    "occurrences": {
+      "micro": {
+        "precision": 0.7081807081807082,
+        "recall": 0.848780487804878,
+        "f1": 0.7721322387397382,
+        "true_positives": 1740,
+        "false_positives": 717,
+        "false_negatives": 310
+      },
+      "per_entity_type": {
+        "PERSON_NAME": {
+          "precision": 0.946969696969697,
+          "recall": 1.0,
+          "f1": 0.9727626459143969,
+          "true_positives": 500,
+          "false_positives": 28,
+          "false_negatives": 0
+        },
+        "ID_CARD_NUMBER": {
+          "precision": 0.782608695652174,
+          "recall": 0.81,
+          "f1": 0.7960687960687962,
+          "true_positives": 162,
+          "false_positives": 45,
+          "false_negatives": 38
+        },
+        "ADDRESS": {
+          "precision": 0.030226700251889168,
+          "recall": 0.06,
+          "f1": 0.04020100502512562,
+          "true_positives": 12,
+          "false_positives": 385,
+          "false_negatives": 188
+        },
+        "REGISTRATION_NUMBER": {
+          "precision": 0.8181818181818182,
+          "recall": 0.9,
+          "f1": 0.8571428571428572,
+          "true_positives": 225,
+          "false_positives": 50,
+          "false_negatives": 25
+        },
+        "DATE": {
+          "precision": 0.9707317073170731,
+          "recall": 0.995,
+          "f1": 0.982716049382716,
+          "true_positives": 398,
+          "false_positives": 12,
+          "false_negatives": 2
+        },
+        "AMOUNT": {
+          "precision": 0.7066115702479339,
+          "recall": 0.855,
+          "f1": 0.7737556561085973,
+          "true_positives": 171,
+          "false_positives": 71,
+          "false_negatives": 29
+        },
+        "ORGANIZATION": {
+          "precision": 0.6834170854271356,
+          "recall": 0.9066666666666666,
+          "f1": 0.7793696275071633,
+          "true_positives": 272,
+          "false_positives": 126,
+          "false_negatives": 28
+        }
+      }
+    },
+    "unique": {
+      "micro": {
+        "precision": 0.6715715126545027,
+        "recall": 0.8776923076923077,
+        "f1": 0.760920306768923,
+        "true_positives": 1141,
+        "false_positives": 558,
+        "false_negatives": 159
+      },
+      "per_entity_type": {
+        "PERSON_NAME": {
+          "precision": 0.8426966292134831,
+          "recall": 1.0,
+          "f1": 0.9146341463414633,
+          "true_positives": 150,
+          "false_positives": 28,
+          "false_negatives": 0
+        },
+        "ID_CARD_NUMBER": {
+          "precision": 0.6875,
+          "recall": 0.99,
+          "f1": 0.8114754098360656,
+          "true_positives": 99,
+          "false_positives": 45,
+          "false_negatives": 1
+        },
+        "ADDRESS": {
+          "precision": 0.045283018867924525,
+          "recall": 0.12,
+          "f1": 0.06575342465753424,
+          "true_positives": 12,
+          "false_positives": 253,
+          "false_negatives": 88
+        },
+        "REGISTRATION_NUMBER": {
+          "precision": 0.7298850574712644,
+          "recall": 0.8466666666666667,
+          "f1": 0.7839506172839505,
+          "true_positives": 127,
+          "false_positives": 47,
+          "false_negatives": 23
+        },
+        "DATE": {
+          "precision": 0.9707317073170731,
+          "recall": 0.995,
+          "f1": 0.982716049382716,
+          "true_positives": 398,
+          "false_positives": 12,
+          "false_negatives": 2
+        },
+        "AMOUNT": {
+          "precision": 0.7066115702479339,
+          "recall": 0.855,
+          "f1": 0.7737556561085973,
+          "true_positives": 171,
+          "false_positives": 71,
+          "false_negatives": 29
+        },
+        "ORGANIZATION": {
+          "precision": 0.6433566433566433,
+          "recall": 0.92,
+          "f1": 0.757201646090535,
+          "true_positives": 184,
+          "false_positives": 102,
+          "false_negatives": 16
+        }
+      }
+    }
+  }
+}
