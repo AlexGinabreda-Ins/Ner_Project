@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.idea/
+
+/data/**/*.jsonl
+/data/**/*.pdf
+/results/**/*.jsonl
+
